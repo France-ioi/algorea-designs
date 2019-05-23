@@ -2,13 +2,27 @@
 layout: default
 ---
 
-<h2 class="title">{{ page.title }}</h2>
-<small>(edit this page on <a href="{{ site.github-url }}/edit/master/_designs/search.md">GitHub</a>)</small>
-
-{% if page.image %}
-<img src="{{ site.url }}/img/{{ page.image }}" />
-{% endif %}
-
-{{ content }}
-
-{% include disqus.html %}
+<div class="navigation">
+  <ul>
+    {% for node in site.designs %}
+      {% if page.url == node.url %}
+        <li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
+      {% else %}
+        <li><a href="{{node.url}}">{{node.title}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+<div class="page-content">
+  <div class="cols half">
+    {% if page.image %}
+    <div class="interfacePreview">
+      <img src="{{ site.url }}/img/{{ page.image }}" />
+    </div>
+  {% endif %}
+    <div class="interfaceDescription">
+      <h3 class="ref">{{ page.ref }}</h3>
+      {{ content }}
+    </div>
+  </div>
+</div>

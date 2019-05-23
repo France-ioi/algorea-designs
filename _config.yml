@@ -12,6 +12,7 @@ gfm_quirks: paragraph_end
 collections:
   designs:
     output: true
+    permalink: /:title
 
 title: France-IOI
 description: Commented designs

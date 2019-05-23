@@ -1,0 +1,113 @@
+---
+---
+@import "{{ site.theme }}";
+$text-color: #333;
+$text-color-light: #fff;
+$accent-color: #e86d8f;
+$background-color-medium: #efefef;
+$background-color-light: #fff;
+$background-color-dark: #000;
+
+#skip-to-content {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+
+  &:focus {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: auto;
+    width: auto;
+    background: invert($body-link-color);
+    outline: thick solid invert($body-link-color);
+  }
+}
+h1 {
+  font-size: 1rem;
+}
+h2 {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+.cols.half {
+  display: flex;
+  &>*{
+    flex: 0 0 50%;
+  }
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: $text-color;
+  background: $background-color-medium;
+  border-bottom: 2px solid $accent-color;
+
+  .project-name {
+    font-size: 1rem;
+    margin: 0 2rem 0 0;
+    order: 0;
+  }
+  .project-tagline {
+    margin: 0;
+    font-size: 0.875rem;
+    order: 2;
+  }
+}
+@media screen and (min-width: 64em) {
+  .page-header { //override
+    padding: 10px 2rem;
+  }
+}
+.main-content {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  display: flex;
+  font-size: 1rem;
+}
+.page-content {
+  .interfacePreview {
+    padding: 1rem;
+    background-color: $background-color-dark;
+    img {
+      max-width: 100%;
+    }
+  }
+  .interfaceDescription {
+    padding: 1rem;
+    .ref {
+      font-size: 1rem;
+      font-family: monospace;
+      color: $accent-color;
+    }
+  }
+}
+.navigation {
+  font-size: 12px;
+  background-color: $text-color;
+  flex: 0 0 220px;
+  padding: 1rem 1rem 2rem 1rem ;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    a {
+      color: #fff;
+      &.active {
+        color: $accent-color;
+      }
+    }
+  }
+}
+.site-footer {
+  margin-top: 0;
+  padding: 3px;
+  font-size: 0.75rem;
+  background-color: $background-color-medium;
+
+}
