@@ -32,15 +32,16 @@ h2 {
   font-size: 0.875rem;
   font-weight: normal;
 }
-.cols.half {
+.cols {
   display: flex;
-  &>*{
+  .half {
     flex: 0 0 50%;
   }
 }
 .page-header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   padding: 10px;
   color: $text-color;
   background: $background-color-medium;
@@ -63,29 +64,30 @@ h2 {
   }
 }
 .main-content {
-  width: 100%;
   max-width: none;
   padding: 0;
   display: flex;
   font-size: 1rem;
+  flex: 1 1 auto;
 }
-.page-content {
-  .interfacePreview {
-    padding: 1rem;
-    background-color: $background-color-dark;
-    img {
-      max-width: 100%;
-    }
+.comments {
+  padding: 2rem;
+  flex: 1 1 auto;
+}
+@media screen and (min-width: 100rem) {
+  .main-content {
+    flex: 1 1 0;
+    // margin-right: 350px;
   }
-  .interfaceDescription {
-    padding: 1rem;
-    .ref {
-      font-size: 1rem;
-      font-family: monospace;
-      color: $accent-color;
-    }
+  .comments {
+    //padding: 2rem;
+    //flex: 0 0 350px;
+    //max-height: 100%;
+    //overflow: auto;
+    //width: 350px;
   }
 }
+
 .navigation {
   font-size: 12px;
   background-color: $text-color;
@@ -104,10 +106,28 @@ h2 {
     }
   }
 }
+.page-content {
+  flex: 1 1 auto;
+  .interfacePreview {
+    padding: 1rem;
+    background-color: $background-color-dark;
+    img {
+      max-width: 100%;
+    }
+  }
+  .interfaceDescription {
+    padding: 1rem;
+    .ref {
+      font-size: 1rem;
+      font-family: monospace;
+      color: $accent-color;
+    }
+  }
+}
+
 .site-footer {
   margin-top: 0;
   padding: 3px;
   font-size: 0.75rem;
   background-color: $background-color-medium;
-
 }
