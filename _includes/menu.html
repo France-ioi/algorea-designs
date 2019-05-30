@@ -1,0 +1,53 @@
+<script type="text/javascript">
+var elem = document.querySelector("{{ include.component }}");
+var allPages = [{% for node in site.designs %}{
+      url: "{{node.url}}",
+      path: "{{node.relative_path}}".split("/").filter(function(v,i,a){ return i>0 && i<a.length-1 }), // split the path, and remove the root directory and the file to just keep the directory hierarchy
+      title: "{{node.title}}",
+      current: {% if page.url == node.url %}true{% else %}false{% endif %}
+    },
+  {% endfor %}];
+
+function submenuRow(title, content) {
+  var dotPos = title.indexOf(".");
+  if (dotPos > -1) {
+    title = title.substr(dotPos+1);
+  }
+  return "<li><span class=\"menu-tite\">"+title+submenu(content)+"</span></li>"
+}
+function pageRow(page) {
+  var active = page.current ? "class=\"active\"" : ""
+  return "<li "+active+"><a href=\""+page.url+"\" "+active+">"+page.title+"</a></li>"
+}
+
+function submenu(pages) {
+  var html = "<ul>";
+  var lastMenu = undefined;
+  var menuContent = [];
+  pages.forEach(page => {
+    var menu = page.path[0];
+    if (menu) {
+      subpage = { url: page.url, path: page.path.filter(function(v,i,a){ return i>0 }), title: page.title, current: page.current }
+      if (menu == lastMenu) {
+        menuContent.push(subpage)
+      } else {
+        if (menuContent.length > 0) {
+          html += submenuRow(lastMenu, menuContent);
+        }
+        menuContent = [subpage];
+        lastMenu = menu;
+      }
+    } else {
+      html += pageRow(page);
+    }
+  });
+  if (menuContent.length > 0) {
+    html += submenuRow(lastMenu, menuContent);
+  }
+  html += "</ul>";
+  return html;
+}
+
+elem.innerHTML += submenu(allPages);
+
+</script>

@@ -1,19 +1,8 @@
 ---
 layout: default
 ---
-
 <div class="main-content">
-  <div class="navigation">
-    <ul>
-      {% for node in site.designs %}
-        {% if page.url == node.url %}
-          <li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
-        {% else %}
-          <li><a href="{{node.url}}">{{node.title}}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
+  <div class="navigation"></div>
   <div class="page-content cols">
     {% if page.image %}
     <div class="interfacePreview two-thirds">
@@ -29,3 +18,4 @@ layout: default
 <div class="comments">
   {% include disqus.html %}
 </div>
+{% include menu.html component=".navigation" %}
