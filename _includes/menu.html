@@ -13,7 +13,7 @@ function submenuRow(title, content) {
   if (dotPos > -1) {
     title = title.substr(dotPos+1);
   }
-  return "<li><span class=\"menu-tite\">"+title+submenu(content)+"</span></li>"
+  return "<li><span class=\"menu-title\">"+title+submenu(content)+"</span></li>"
 }
 function pageRow(page) {
   var active = page.current ? "class=\"active\"" : ""
