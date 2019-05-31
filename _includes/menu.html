@@ -1,7 +1,7 @@
 <script type="text/javascript">
 var elem = document.querySelector("{{ include.component }}");
 var allPages = [{% for node in site.designs %}{
-      url: "{{site.url}}{{node.url}}",
+      url: "{{site.baseurl}}{{node.url}}",
       path: "{{node.relative_path}}".split("/").filter(function(v,i,a){ return i>0 && i<a.length-1 }), // split the path, and remove the root directory and the file to just keep the directory hierarchy
       title: "{{node.title}}",
       current: {% if page.url == node.url %}true{% else %}false{% endif %}
