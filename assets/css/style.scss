@@ -4,6 +4,7 @@
 $text-color: #333;
 $text-color-light: #fff;
 $accent-color: #e86d8f;
+$accent-color-dark-bg: #e8df6d;
 $background-color-medium: #efefef;
 $background-color-light: #fff;
 $background-color-dark: #000;
@@ -104,10 +105,18 @@ h2 {
     list-style: none;
     padding: 0 0 0 1em;
     margin: 0;
+    .menu-title {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #6de2e8;
+    }
     a {
+      display: inline-block;
+      line-height: 1;
+      padding: 3px 0;
       color: #fff;
       &.active {
-        color: $accent-color;
+        color: $accent-color-dark-bg;
       }
     }
   }
