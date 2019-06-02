@@ -50,4 +50,21 @@ function submenu(pages) {
 
 elem.innerHTML += submenu(allPages);
 
+// toggle sub menus
+var menuBlock = document.getElementsByClassName('menu-title');
+var toggleSubMenu = function() {
+    var sm = this.nextElementSibling;
+    this.classList.toggle('closed')
+
+    if (sm.style.display !== 'none') {
+        sm.style.display = 'none';
+    }
+    else {
+        sm.style.display = 'block';
+    }
+};
+for (var i = 0; i < menuBlock.length; i++) {
+    menuBlock[i].addEventListener('click', toggleSubMenu, false);
+}
+
 </script>

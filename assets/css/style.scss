@@ -103,12 +103,32 @@ h2 {
 
   ul {
     list-style: none;
-    padding: 0 0 0 1em;
+    padding: 0;
     margin: 0;
+    ul {
+      padding-left: 1em;
+    }
     .menu-title {
       text-transform: uppercase;
       font-weight: bold;
       color: #6de2e8;
+      position: relative;
+      &::after{
+          content: '-';
+          border-radius: 50%;
+          width: 1em;
+          position: absolute;
+          text-align: center;
+          vertical-align: middle;
+          line-height: 1em;
+          top: 2px;
+          left: -16px;
+          font-weight: bold;
+          color: #fff;
+      }
+      &.closed::after {
+        content: '+';
+      }
     }
     a {
       display: inline-block;
