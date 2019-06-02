@@ -6,7 +6,9 @@ layout: default
   <div class="page-content cols">
     {% if page.image %}
     <div class="interfacePreview two-thirds">
-      <img src="{{ site.baseurl }}/img/{{ page.image }}" />
+      {% for image in page.image %}
+      <img src="{{ site.baseurl }}/img/{{ image }}" />
+      {% endfor %}
     </div>
     {% endif %}
     <div class="interfaceDescription one-third">
