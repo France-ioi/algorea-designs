@@ -107,6 +107,9 @@ h2 {
     margin: 0;
     ul {
       padding-left: 1em;
+      &.closed {
+        display: none;
+      }
     }
     .menu-title {
       text-transform: uppercase;

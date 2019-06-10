@@ -13,7 +13,7 @@ function submenuRow(title, content) {
   if (dotPos > -1) {
     title = title.substr(dotPos+1);
   }
-  return "<li><span class=\"menu-title\">"+title+"</span>"+submenu(content)+"</li>"
+  return "<li class=\"parent\"><span class=\"menu-title closed\">"+title+"</span>"+submenu(content)+"</li>"
 }
 function pageRow(page) {
   var active = page.current ? "class=\"active\"" : ""
@@ -50,18 +50,26 @@ function submenu(pages) {
 
 elem.innerHTML += submenu(allPages);
 
+// add class to parents of active menu item
+var activeItem = document.querySelector('li.active');
+var parent = activeItem.parentNode;
+while (parent) {
+  if (parent.tagName === "LI") {
+    parent.className += " activeGroup";
+  }
+  parent = parent.parentNode;
+}
+// hide submenus that are not active tree
+var unactiveMenuGroup = document.querySelectorAll('.parent:not(.activeGroup) > ul');
+for (var i = 0; i < unactiveMenuGroup.length; i++) {
+  unactiveMenuGroup[i].className += " closed";
+}
 // toggle sub menus
 var menuBlock = document.getElementsByClassName('menu-title');
 var toggleSubMenu = function() {
+    this.classList.toggle('closed');
     var sm = this.nextElementSibling;
-    this.classList.toggle('closed')
-
-    if (sm.style.display !== 'none') {
-        sm.style.display = 'none';
-    }
-    else {
-        sm.style.display = 'block';
-    }
+    sm.classList.toggle('closed');
 };
 for (var i = 0; i < menuBlock.length; i++) {
     menuBlock[i].addEventListener('click', toggleSubMenu, false);
