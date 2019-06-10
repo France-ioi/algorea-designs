@@ -52,12 +52,14 @@ elem.innerHTML += submenu(allPages);
 
 // add class to parents of active menu item
 var activeItem = document.querySelector('li.active');
-var parent = activeItem.parentNode;
-while (parent) {
-  if (parent.tagName === "LI") {
-    parent.className += " activeGroup";
+if (activeItem) {
+  var parent = activeItem.parentNode;
+  while (parent) {
+    if (parent.tagName === "LI") {
+      parent.className += " activeGroup";
+    }
+    parent = parent.parentNode;
   }
-  parent = parent.parentNode;
 }
 // hide submenus that are not active tree
 var unactiveMenuGroup = document.querySelectorAll('.parent:not(.activeGroup) > ul');
