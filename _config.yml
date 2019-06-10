@@ -16,3 +16,9 @@ collections:
 
 title: France-IOI
 description: Commented designs
+url: "//france-ioi.github.io"
+baseurl: "/algorea-designs"
+
+exclude:
+  - LICENSE
+  - README.md
