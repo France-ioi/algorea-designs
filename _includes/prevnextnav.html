@@ -19,15 +19,15 @@
   {% assign prev = links %}
 {% endfor %}
 
-{% if prevurl %}<a href="{{prevurl}}" class="prev stepNav"><< {{prevtitle}}</a>{% endif %}
+{% if prevurl %}<a href="{{ site.baseurl }}{{prevurl}}" class="prev stepNav"><< {{prevtitle}}</a>{% endif %}
 <span class="page-title">{{ page.title }}
     <small>(edit this page on <a href="https://github.com/France-ioi/algorea-designs/edit/master/{{ page.path }}">GitHub</a>)</small>
 </span>
-{% if nexturl %}<a href="{{nexturl}}" class="nxt stepNav">{{nexttitle}} >></a>{% endif %}
+{% if nexturl %}<a href="{{ site.baseurl }}{{nexturl}}" class="nxt stepNav">{{nexttitle}} >></a>{% endif %}
 
 <script>
 document.body.onkeyup = function(e){
-if (e.ctrlKey && e.keyCode == '37') { window.location = '{{prevurl}}'; }
-if (e.ctrlKey && e.keyCode == '39') { window.location = '{{nexturl}}'; }
+if (e.ctrlKey && e.keyCode == '37') { window.location = '{{ site.baseurl }}{{prevurl}}'; }
+if (e.ctrlKey && e.keyCode == '39') { window.location = '{{ site.baseurl }}{{nexturl}}'; }
 };
 </script>
