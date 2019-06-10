@@ -27,7 +27,7 @@ function submenu(pages) {
   pages.forEach(page => {
     var menu = page.path[0];
     if (menu) {
-      subpage = { url: page.url, path: page.path.filter(function(v,i,a){ return i>0 }), title: page.title, current: page.current }
+      var subpage = { url: page.url, path: page.path.filter(function(v,i,a){ return i>0 }), title: page.title, current: page.current }
       if (menu == lastMenu) {
         menuContent.push(subpage)
       } else {
