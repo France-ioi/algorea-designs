@@ -27,7 +27,9 @@
 
 <script>
 document.body.onkeyup = function(e){
-if ({{prevurl}} && e.ctrlKey && e.keyCode == '37') { window.location = '{{ site.baseurl }}{{prevurl}}'; }
-if ({{nexturl}} && e.ctrlKey && e.keyCode == '39') { window.location = '{{ site.baseurl }}{{nexturl}}'; }
+  var prevurl = '{{prevurl}}';
+  var nexturl = '{{nexturl}}';
+if (prevurl.length && e.ctrlKey && e.keyCode == '37') { window.location = '{{ site.baseurl }}{{prevurl}}'; }
+if (nexturl.length && e.ctrlKey && e.keyCode == '39') { window.location = '{{ site.baseurl }}{{nexturl}}'; }
 };
 </script>
