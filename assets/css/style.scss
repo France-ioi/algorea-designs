@@ -29,10 +29,7 @@ $background-color-dark: #000;
 h1 {
   font-size: 1rem;
 }
-h2 {
-  font-size: 0.875rem;
-  font-weight: normal;
-}
+
 .cols {
   display: flex;
   .half {
@@ -54,6 +51,16 @@ h2 {
   display: flex;
   font-size: 1rem;
   flex: 1 1 auto;
+  h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: $text-color;
+  }
+  h3 {
+    color: $text-color;
+    margin: 5px 0;
+    font-size: 0.875rem;
+  }
 }
 .comments {
   padding: 2rem;
@@ -193,6 +200,18 @@ h2 {
     text-transform: uppercase;
     border-bottom: 1px solid;
   }
+  .scenarii ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+.color-thread {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
 }
 .site-footer {
   margin-top: 0;

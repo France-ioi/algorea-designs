@@ -2,20 +2,25 @@
   subfolderitems:
     - title: "Accéder à la plateforme"
       path: 00.Global_02.Homepage
-      color: 
+      color: "#ff0000"
     - title: "S'inscrire sur la plateforme"
       path: 00.Global_05.Language-select
+      color: "#ffcccc"
     - title: "Se connecter sur la plateforme"
       path: 00.Global_05.Language-select
+      color: "#ffeeee"
 
 - scenar: "Organiser la participation de ses classes à un concours"
   subfolderitems:
     - title: "S'informer sur le concours"
       path: 00.Global_02.Homepage
+      color: "#00aa00"
     - title: "Devenir coordinateur"
       path: 03.Activities_00.Header_a.Landing
+      color: "#77cc77"
     - title: "Prendre connaissance du fonctionnement du concours"
       path: 03.Activities_00.Header_b.Access-to-activity_a.Start-contest-(teacher-view)
+      color: "#aaffaa"
 
 - scenar: "Préparer des groupes"
   subfolderitems:

@@ -5,7 +5,7 @@
     {% if item.subfolderitems %}
       <ul>
     	{% for subitem in item.subfolderitems %}
-      	<li><a href="{{ subitem.path }}">{{ subitem.title }}</a></li>
+        <li><span class="color-thread" style="background-color: {{ subitem.color }}"></span><a href="{{ subitem.path }}">{{ subitem.title }}</a></li>
       	{% endfor %}
       </ul>
     {% endif %}
