@@ -1,0 +1,35 @@
+- scenar: "Accéder à la plateforme"
+  subfolderitems:
+    - title: "Accéder à la plateforme"
+      path: 00.Global_02.Homepage
+      color: 
+    - title: "S'inscrire sur la plateforme"
+      path: 00.Global_05.Language-select
+    - title: "Se connecter sur la plateforme"
+      path: 00.Global_05.Language-select
+
+- scenar: "Organiser la participation de ses classes à un concours"
+  subfolderitems:
+    - title: "S'informer sur le concours"
+      path: 00.Global_02.Homepage
+    - title: "Devenir coordinateur"
+      path: 03.Activities_00.Header_a.Landing
+    - title: "Prendre connaissance du fonctionnement du concours"
+      path: 03.Activities_00.Header_b.Access-to-activity_a.Start-contest-(teacher-view)
+
+- scenar: "Préparer des groupes"
+  subfolderitems:
+    - title: "Renseigner son ou ses établissements"
+      path: 03.Activities_02.Participation_g.Sessions_a.Empty
+    - title: "Sélectionner son ou ses établissements"
+      path: 01.Groups_a.Groups-that-you-manage_a.Register-your-institution
+    - title: "Créer un établissement"
+      path: 01.Groups_a.Groups-that-you-manage_a.Register-your-institution
+    - title: "Créer un groupe"
+      path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
+    - title: "Ajouter un groupe existant"
+      path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
+    - title: "Consulter la liste de ses groupes"
+      path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
+    - title: "Constituer des sous-groupes"
+      path: 01.Groups_02.Composition_h.Empty-group

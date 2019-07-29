@@ -1,0 +1,13 @@
+<ul>
+  {% for item in include.nav %}
+    <li>{{ item.scenar }}</li>
+
+    {% if item.subfolderitems %}
+      <ul>
+    	{% for subitem in item.subfolderitems %}
+      	<li><a href="{{ subitem.path }}">{{ subitem.title }}</a></li>
+      	{% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</ul>

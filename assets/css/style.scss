@@ -45,30 +45,8 @@ h2 {
     flex: 0 0 67%;
   }
 }
-.page-header {
+.content-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 10px;
-  color: $text-color;
-  background: $background-color-medium;
-  border-bottom: 2px solid $accent-color;
-
-  .project-name {
-    font-size: 1rem;
-    margin: 0 2rem 0 0;
-    order: 0;
-  }
-  .project-tagline {
-    margin: 0;
-    font-size: 0.875rem;
-    order: 2;
-  }
-}
-@media screen and (min-width: 64em) {
-  .page-header { //override
-    padding: 10px 2rem;
-  }
 }
 .main-content {
   max-width: none;
@@ -94,53 +72,79 @@ h2 {
     //width: 350px;
   }
 }
-
-.navigation {
+.sidebar {
+  padding: 10px;
+  color: $text-color;
+  background: $background-color-medium;
+  border-bottom: 2px solid $accent-color;
   font-size: 12px;
   background-color: $text-color;
   flex: 0 0 220px;
-  padding: 1rem 1rem 2rem 1rem ;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    ul {
-      padding-left: 1em;
-      &.closed {
-        display: none;
-      }
-    }
-    .menu-title {
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #6de2e8;
-      position: relative;
-      cursor: pointer;
-      &::after{
-          content: '-';
-          border-radius: 50%;
-          width: 1em;
-          position: absolute;
-          text-align: center;
-          vertical-align: middle;
-          line-height: 1em;
-          top: 2px;
-          left: -16px;
-          font-weight: bold;
-          color: #fff;
-      }
-      &.closed::after {
-        content: '+';
-      }
-    }
+  padding: 0;
+  .header {
+    background-color: #4a90e2;
+    padding: 10px;
+  }
     a {
-      display: inline-block;
-      line-height: 1;
-      padding: 3px 0;
-      color: #fff;
-      &.active {
-        color: $accent-color-dark-bg;
+      color: $text-color-light;
+    }
+  .brand-name {
+    font-size: 1rem;
+    margin: 0;
+    display: block;
+  }
+  .project-name {
+    margin: 0;
+    font-size: 0.875rem;
+    order: 2;
+    color: $text-color-light;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+  }
+  .navigation {
+    padding: 1em 1.5em;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      ul {
+        padding-left: 1em;
+        &.closed {
+          display: none;
+        }
+      }
+      .menu-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #6de2e8;
+        position: relative;
+        cursor: pointer;
+        &::after{
+            content: '-';
+            border-radius: 50%;
+            width: 1em;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 1em;
+            top: 2px;
+            left: -16px;
+            font-weight: bold;
+            color: #fff;
+        }
+        &.closed::after {
+          content: '+';
+        }
+      }
+      a {
+        display: inline-block;
+        line-height: 1;
+        padding: 3px 0;
+        color: #fff;
+        &.active {
+          color: $accent-color-dark-bg;
+        }
       }
     }
   }
@@ -159,6 +163,9 @@ h2 {
   .interfacePreview {
     order: 2;
     padding: 1rem;
+    h2 {
+      color: $text-color-light;
+    }
     background-color: $background-color-dark;
     img {
       max-width: 100%;
@@ -166,14 +173,27 @@ h2 {
   }
   .interfaceDescription {
     padding: 1rem;
+    font-size: 0.875rem;
     .ref {
-      font-size: 1rem;
       font-family: monospace;
       color: $accent-color;
     }
+    .design-heading {
+      text-align: center;
+    }
   }
 }
-
+.home {
+  padding: 2em;
+  .cols > * {
+    padding: 0 10px;
+  }
+  h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+  }
+}
 .site-footer {
   margin-top: 0;
   padding: 3px;

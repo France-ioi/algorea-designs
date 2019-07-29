@@ -22,29 +22,39 @@
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <header class="page-header" role="banner">
-      <div class="project-name">{{ site.title | default: site.github.repository_name }}</div>
-      <div class="project-tagline">{{ site.description | default: site.github.project_tagline }}</div>
+    <main id="content" role="main">
       {% if page.layout == "design" %}
-        <div>{% include prevnextnav.html %}</div>
-      {% else %}
-        <div class="page-title"> {{ page.title }}
-          <small>(edit this page on <a href="https://github.com/France-ioi/algorea-designs/edit/master/{{ page.path }}">GitHub</a>)</small>
+        <div class="content-wrapper">
+          <div class="sidebar">
+            <div class="header">
+              <a href="{{ site.baseurl }}{% link index.html %}">
+                <span class="brand-name">{{ site.title | default: site.github.repository_name }}</span>
+                <span class="project-name">{{ site.description | default: site.github.project_tagline }}</span>
+              </a>
+            </div>
+            <div class="navigation"></div>
+          </div>
+          <div class="main-content">
+            {{ content }}
+          </div>
         </div>
-      {% endif %}
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
-    </header>
-
-    <main id="content" class="content-wrapper" role="main">
-      {{ content }}
+      {% else %}
+        <div>
+          {{ content }}
+        </div>
+        {% endif %}
+        {% if site.github.is_project_page %}
+          <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+        {% endif %}
+        {% if site.show_downloads %}
+          <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+          <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+        {% endif %}
+      </div>
     </main>
-
+    <div class="comments">
+    {% include disqus.html %}
+    </div>
     <footer class="site-footer">
       {% if site.github.is_project_page %}
         <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
@@ -53,4 +63,5 @@
     </footer>
   </body>
 
+{% include menu.html component=".navigation" %}
 </html>

@@ -19,10 +19,11 @@
   {% assign prev = links %}
 {% endfor %}
 
-{% if prevurl %}<a href="{{ site.baseurl }}{{prevurl}}" class="prev stepNav"><< {{prevtitle}}</a>{% endif %}
-<span class="page-title">{{ page.title }}
-    <small>(edit this page on <a href="https://github.com/France-ioi/algorea-designs/edit/master/{{ page.path }}">GitHub</a>)</small>
-</span>
+<span class="page-title">
+  {{ page.title }}
+  <small>(edit this page on <a href="https://github.com/France-ioi/algorea-designs/edit/master/{{ page.path }}">GitHub</a>)</small>
+</span><br>
+{% if prevurl %}<a href="{{ site.baseurl }}{{prevurl}}" class="prev stepNav"><< {{prevtitle}}</a>{% endif %} |
 {% if nexturl %}<a href="{{ site.baseurl }}{{nexturl}}" class="nxt stepNav">{{nexttitle}} >></a>{% endif %}
 
 <script>

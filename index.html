@@ -2,10 +2,22 @@
 layout: default
 ---
 
-<div class="main-content">
-	<div class="page-content">
-		<h1 style="font-size:2rem;text-align:center;margin:3em auto;color:#e86d8f;">France IOI documentation for Algorea Platform new design</h1>
-		<div class="overview"></div>
+<div class="page-content home">
+	<h1 style="font-weight: normal;text-align:center;margin:1em auto;">
+		<span  style="font-size:2rem;color:#e86d8f;">France IOI documentation for Algorea Platform new design</span> <br/>
+		<small>(edit this page on <a href="https://github.com/France-ioi/algorea-designs/edit/master/{{ page.path }}">GitHub</a>)</small>
+	</h1>
+	<p>You can browse the interface mockups either by type of content or by use case.</p>
+	<p>Navigation by type : choose a mockup to view on the left column, then you can use the left hand menu to choose another mockup, or by using keyboard CTRL + → or CTRL + ← to see next / previous mockup.</p>
+	<p>Navigating by use case : choose a scenario / story in the right column to go to the mockup describing the first step of the choosen action. Once on the mockup page, you can continue following the scenario by clicking on the "next step" link under the chosen scenario. Please note that a same mockup can present different use cases, you will find the next step link for your chosen scenario at the end of the said scenario section, labelled by its title. Each scenario has a different color. You can use this to find your scenario easily in the mockup description.</p>
+	<div class="cols">
+		<div class="overview half">
+			<h2>Types</h2>
+		</div>
+		<div class="scenarii half">
+			<h2>Stories</h2>
+			{% include scenar.html nav=site.data.scenarii %}
+		</div>
 	</div>
 </div>
 {% include menu.html component=".overview" %}

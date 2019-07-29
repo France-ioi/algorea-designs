@@ -1,23 +1,20 @@
 ---
 layout: default
 ---
-<div class="main-content">
-  <div class="navigation"></div>
-  <div class="page-content cols">
-    {% if page.image %}
-    <div class="interfacePreview two-thirds">
-      {% for image in page.image %}
-      <img src="{{ site.baseurl }}/img/{{ image }}" />
-      {% endfor %}
+
+<div class="page-content cols">
+  {% if page.image %}
+  <div class="interfacePreview two-thirds">
+    <h2 class="ref">{{ page.ref }}</h2>
+    {% for image in page.image %}
+    <img src="{{ site.baseurl }}/img/{{ image }}" />
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="interfaceDescription one-third">
+    <div class="design-heading">
+      {% include prevnextnav.html %}
     </div>
-    {% endif %}
-    <div class="interfaceDescription one-third">
-      <h2 class="ref">{{ page.ref }}</h2>
-      {{ content }}
-    </div>
+    {{ content }}
   </div>
 </div>
-<div class="comments">
-  {% include disqus.html %}
-</div>
-{% include menu.html component=".navigation" %}
