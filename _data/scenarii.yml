@@ -26,15 +26,22 @@
   subfolderitems:
     - title: "Renseigner son ou ses établissements"
       path: 03.Activities_02.Participation_g.Sessions_a.Empty
+      color: "#aaf"
     - title: "Sélectionner son ou ses établissements"
       path: 01.Groups_a.Groups-that-you-manage_a.Register-your-institution
+      color: "#aaf"
     - title: "Créer un établissement"
       path: 01.Groups_a.Groups-that-you-manage_a.Register-your-institution
+      color: "#aaf"
     - title: "Créer un groupe"
-      path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
-    - title: "Ajouter un groupe existant"
-      path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
+      path: 01.Groups_Edit_02.Create-group
+      color: "#aaf"
     - title: "Consulter la liste de ses groupes"
       path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
+      color: "#aaf"
+    - title: "Ajouter un groupe existant"
+      path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
+      color: "#aaf"
     - title: "Constituer des sous-groupes"
       path: 01.Groups_02.Composition_h.Empty-group
+      color: "#aaf"
