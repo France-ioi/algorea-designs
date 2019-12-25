@@ -1,47 +1,47 @@
-- scenar: "Accéder à la plateforme"
+- scenar: "Load the platform"
   subfolderitems:
-    - title: "Accéder à la plateforme"
+    - title: "Load the platform"
       path: 00.Global_02.Homepage
       color: "#ff0000"
-    - title: "S'inscrire sur la plateforme"
+    - title: "Register on the platform"
       path: 00.Global_05.Language-select
       color: "#ffcccc"
-    - title: "Se connecter sur la plateforme"
+    - title: "Login on the platform"
       path: 00.Global_05.Language-select
       color: "#ffeeee"
 
-- scenar: "Organiser la participation de ses classes à un concours"
+- scenar: "Organize your student's participations to a contest"
   subfolderitems:
-    - title: "S'informer sur le concours"
+    - title: "Learn about the contest"
       path: 00.Global_02.Homepage
       color: "#00aa00"
-    - title: "Devenir coordinateur"
+    - title: "Become a coordinator"
       path: 03.Activities_00.Header_a.Landing
       color: "#77cc77"
-    - title: "Prendre connaissance du fonctionnement du concours"
+    - title: "Learn about how the contest works"
       path: 03.Activities_00.Header_b.Access-to-activity_a.Start-contest-(teacher-view)
       color: "#aaffaa"
 
-- scenar: "Préparer des groupes"
+- scenar: "Prepare your groups"
   subfolderitems:
-    - title: "Renseigner son ou ses établissements"
+    - title: "Register your institution(s)"
       path: 03.Activities_02.Participation_g.Sessions_a.Empty
       color: "#aaf"
-    - title: "Sélectionner son ou ses établissements"
+    - title: "Select your institution(s)"
       path: 01.Groups_a.Groups-that-you-manage_a.Register-your-institution
       color: "#aaf"
-    - title: "Créer un établissement"
+    - title: "Create an institution"
       path: 01.Groups_a.Groups-that-you-manage_a.Register-your-institution
       color: "#aaf"
-    - title: "Créer un groupe"
+    - title: "Create a group"
       path: 01.Groups_Edit_02.Create-group
       color: "#aaf"
-    - title: "Consulter la liste de ses groupes"
+    - title: "View the list of your groups"
       path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
       color: "#aaf"
-    - title: "Ajouter un groupe existant"
+    - title: "Add an existing group"
       path: 01.Groups_a.Groups-that-you-manage_b.Your-groups
       color: "#aaf"
-    - title: "Constituer des sous-groupes"
+    - title: "Create sub-groups"
       path: 01.Groups_02.Composition_h.Empty-group
       color: "#aaf"
